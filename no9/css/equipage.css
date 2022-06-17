@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header {
+    background-color: slategray;
+}
+.containter {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+.logo {
+    width: 100px;
+}
+.logo img {
+    width: 100%;
+    vertical-align: middle;
+}
+.main-nav {
+margin: auto;
+font-size: 17px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-style: oblique;
+}
+.main-nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 3em;
+    position: relative;
+}
+.main-nav a:after{
+    content:'' ;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -5px;
+    height: 0;
+    border-bottom: 1px solid black;
+    transition: .3s;
+}
+.main-nav a:hover:after {
+    left: 0;
+    right: 0;
+}
+.search {
+display: flex;
+}
+.search button,
+.search input {
+border: none;
+background-color: #fff;
+padding: 5px 10px;
+}
+.search button:focus,
+.search input:focus {
+    outline: none;
+}
+.search button{
+border-radius: 0 200px 200px 0;
+}
+.search input {
+    border-radius: 200px 0 0 200px;
+}
+.scope {
+    width:900px ;
+    height:auto;
+    background-color: aliceblue;
+    font-family: 標楷體;
+    position: relative;
+    margin-left: 20%;
+    margin-right: 25%;
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.im {
+    width: 298px;
+    height: 298px;
+    border-bottom: 1px dashed black;
+    position: relative;
+}
+.im1 {
+    width: 298px;
+    height: 298px;
+}
+.contant {
+    width: 597px;
+    height:298px ;
+    border-bottom: 1px dashed black;
+    position: relative;
+    background-color: #fff;
+}
+.title {
+    font-size: 40px;
+    text-align: center;
+}
+.tool{
+    color: grey;
+    text-align: center;
+    margin-top: 5px;
+}
+.color {
+    font-size: 25px;
+    margin-left: 5px;
+    margin-top: 10px;
+
+}
+.price {
+    font-size: 30px;
+    color: red;
+    text-align: center;
+}
+.price p{
+    font-size: 20px;
+    color: grey;
+}
+.button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.num-button{
+    border: 1 solid lightgray;
+    width: 25px;
+    height: 35px;
+    cursor: pointer;
+}
+.number {
+    border: none;
+    border-top: 1 solid lightgray;
+    border-bottom: 1 solid lightgray;
+    height: 35px;
+    width: 50px;
+    text-align: center;
+}
+.stock {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+}
+.buy {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.buy p{
+    margin-left: 10px;
+}
+.format{
+    width: 898px;
+    height:auto;
+    background-color: #fff;
+    border: 1px dashed black;
+}
+.text {
+    font-size: 30px;
+}
+.y{
+    border-bottom: 1px dashed black ;
+}
+.t{
+    font-size: 20px;
+    width: auto;
+    color: gray;
+}
+.y p{
+    font-size: 25px;
+}
+.adds {
+    text-align: center;
+    color: red;
+    font-size: 25px;
+}
+.title2 {
+    text-align: center;
+    font-size: 40px;
+    color: coral;
+    border-bottom: 1px dashed coral;
+}
+.message-box{
+    height: auto;
+    margin-top: 10px;
+    border: 2px solid rgba(240, 223, 128, 0.616) ;
+    border-radius: 10PX;
+    width: 896px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.message {
+    font-size: 35px;
+}
+.bb {
+    margin: 2px;
+    border-bottom: 1px dashed coral;
+    font-size: 20px;
+}
+.btn {
+    border: none;
+    background-color: aqua;
+    color:black;
+}
+.star {
+    width: 10px;
+    height: 10px;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASUS</title>
+   
+    <style>
+        @import url(css/asus-zf8.css);
+    </style>    
+</head>
+    <body background="./images/1.jpg">
+       <header class="header">
+           <div class="containter">
+               <a href="index.html" class="logo">
+                   <img src="./images/logo.jpg" alt="logo">
+                   <!--<div>Logo通過<a href="https://www.designevo.com/tw/" title="免費線上logo製作軟體">DesignEvo</a>設計製作</div>-->
+               </a>
+               <nav class="main-nav">
+                <a href="aboutme.html">關於我們
+                    <i class="fa-solid fa-people-group"></i>
+                   </a>
+                   <a href="login.html">會員登入
+                    <i class="fa-solid fa-user"></i>
+                   </a>
+                   <a href="shopping car.html">購物車
+                    <i class="fa-solid fa-cart-shopping"></i>
+                   </a>
+                   <a href="login.html">會員中心
+                    <i class="fa-solid fa-address-card"></i>
+                   </a>
+                </nav>
+                <form class="search">
+                    <input type="search" name="" id="" >
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>   
+             </div>
+     </header>
+     <form class="scope">
+            <div class="im"> <!--單獨圖片-->
+                <img src="./images/ZF8.jpg" class="im1">
+            </div>
+            <div class="contant">
+                <div class="title"> <!--商品名字-->
+                    ASUS Zenfone 8 8GB/128GB
+                  </div>
+                  <div class="tool"><!--商品小格-->
+                    5G、120HZ、超防水
+                </div>
+                <div class="color"><!--機身顏色-->
+                    機身顏色:
+                    <input type="radio" name="color" value="black">消光黑
+                    <input type="radio" name="color" value="white">輕巧白
+                    <input type="radio" name="color" value="silver">簡約銀
+                </div>
+                <div class="price"><!--商品價格-->
+                    <p>售價:</p>$11600
+                </div>
+                <div class="button"><!--數量-->
+                    <input type="button" class="num-button" value="-" id="btnOne" onclick="minusNUM(0)">
+                    <input type="number" id="num" class="number" value="1" min="1">
+                    <input type="button" class="num-button" value="+" id="btnTwo" onclick="addNUM(0)">
+                </div>
+                <div class="buy">
+                    <input type="submit" value="加入購物車">
+                </div>
+                <div class="stock">
+                    <p>庫存:10</p>
+                </div>
+            </div>
+            <div class="format">
+                    <div class="text">
+                        產品規格
+                    </div>
+                        <div class="y"><!--產品規格-->
+                          <div class="t">&diams;作業系統與版本:</div><p>Android 11</p>
+                          <div class="t">&diams;處理器品牌:</div><p>Qualcomm</p>
+                          <div class="t">&diams;處理器型號:</div><p>Snapdragon 888</p>
+                          <div class="t">&diams;主螢幕尺寸:</div><p>5.9 inch</p>
+                          <div class="t">&diams;主相機畫素:</div><p>6400 萬畫素</p>
+                          <div class="t">&diams;RAM記憶體:</div><p>8 GB</p>
+                          <div class="t">&diams;ROM儲存空間:</div><p>128 GB</p>
+                          <div class="t">&diams;電池容量:</div><p>4000 mAh</p>
+                        </div>
+                        <div class="adds">
+                            支援5G.4G網路及各家電信業者<br>
+                            <!--外部網站-->
+                            <a href="https://www.asus.com/tw/Mobile/Phones/ZenFone/Zenfone-8/" >更多詳細內容</a>
+                        </div>
+            </div>
+            <form>
+            <div class="message-box">
+                  <div class="title2">
+                      留言板
+                  </div>
+                  <div class="bb">
+                    留言:<input type="text"><!--留言-->
+                    <input type="submit" value="送出" class="btn">
+                    <div id="stars" class="le">
+                        <img src="./images/2.png" alt="" class="star">
+                        <img src="./images/2.png" alt="" class="star">
+                        <img src="./images/2.png" alt="" class="star">
+                        <img src="./images/2.png" alt="" class="star">
+                        <img src="./images/2.png" alt="" class="star">
+                    </div>
+                    <div id="comment" class="le">
+                    </div>                  
+                </div>
+                  <div class="message">
+                      測試
+                  </div>
+                  <div class="message">
+                    測試
+                </div>
+                <div class="message">
+                    測試
+                </div>
+                <div class="message">
+                    測試
+                </div>
+                <div class="message">
+                    測試
+                </div>
+            </div>
+            </form>
+     </form> 
+     <script>
+        //制作一個星星評分
+        var divStars = document.getElementById("stars");
+        var divComment = document.getElementById("comment");
+        var attitude = ["差", "較差", "普通", "好", "很好"];
+        var starNum = -1; //記錄當前第幾顆星星被點擊
+        var starArray = Array.from(divStars.children); //星星陣列
+
+        //滑鼠移入
+        divStars.onmouseover = function (e) {
+            if (e.target.tagName === "IMG") { //事件源是圖片
+                //把滑鼠移動到的星星替換圖片
+                e.target.src = "./images/b1.png";
+                //把滑鼠移動到的星星之前的星星替換圖片
+                var prev = e.target.previousElementSibling;
+                while (prev) {
+                    prev.src = "./images/b1.png";
+                    prev = prev.previousElementSibling;
+                }
+                //把滑鼠移動到的星星之后的星星替換圖片
+                var next = e.target.nextElementSibling;
+                while (next) { //把滑鼠移動到的星星之后的星星替換圖片
+                    next.src = "./images/2.png";
+                    next = next.nextElementSibling;
+                }
+
+                var index = starArray.indexOf(e.target); //找到滑鼠移動到的星星的序號
+                divComment.innerHTML = attitude[index]; //顯示對應的評論
+            }
+        }
+
+        //滑鼠點擊
+        divStars.onclick = function (e) {
+            if (e.target.tagName === "IMG") {
+                //記錄當前點擊的星星序號
+                starNum = starArray.indexOf(e.target);
+            }
+        }
+
+        //滑鼠移出
+        divStars.onmouseout = function (e) {
+            if (starNum !== -1) { //滑鼠點擊事件發生，將評分固定在點擊的星星上
+                for (var i = 0; i < divStars.children.length; i++) {
+                    if (i <= starNum) {
+                        divStars.children[i].src = "./images/b1.png";
+                        
+                    } else {
+                        divStars.children[i].src = "./images/2.png";
+                    }
+                }
+                divComment.innerHTML = attitude[starNum]; //顯示對應的評論
+            } else {
+                for (var i = 0; i < divStars.children.length; i++) {
+                    divStars.children[i].src = "./images/2.png";
+                }
+                divComment.innerHTML = ""; //不顯示評論
+            }
+        }
+    </script>
+        <script src="https://kit.fontawesome.com/4aab3a48a2.js" crossorigin="anonymous">
+         function minusNUM(num){
+            let input=Number(document.getElementsByClassName('number')[num].value);
+            if(input != 1){
+               document.getElementsByClassName('number')[num].value = input -1;
+            }
+        }
+        function addNUM(num){
+            let input=Number(document.getElementsByClassName('number')[num].value);
+                document.getElementsByClassName('number')[num].value = input +1;
+            }
+    </script>
+</body>
+</html>

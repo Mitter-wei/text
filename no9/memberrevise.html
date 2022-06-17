@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revise</title>
+    <style>
+        @import url(css/memberrevise.css);
+       </style>
+</head>
+<body background="./images/1.jpg">
+    <header class="header">
+        <div class="containter">
+            <a href="#" class="logo">
+                <img src="./images/logo.jpg" alt="logo">
+                <!--<div>Logo通過<a href="https://www.designevo.com/tw/" title="免費線上logo製作軟體">DesignEvo</a>設計製作</div>-->
+            </a>
+            <nav class="main-nav">
+                <a href="memberdata.html">基本資料
+                </a>
+                <a href="#">修改資料
+                </a>
+                <a href="memberlist.html">訂單紀錄
+                </a>
+                <a href="index.html">返回首頁
+                </a>
+             </nav>
+         </div>
+     </header>
+     <form>
+     <div class="box">
+        <div class="text">
+           <h1>修改基本資料</h1>  
+           <div class="title">名字:<br>
+               <input type="text">
+               </div>
+               <div class="title">密碼:<br>
+                <input type="password">
+            </div>
+            <div class="title">確認密碼:<br>
+                <input type="password">
+            </div>
+               <div class="title">信箱:<br>
+                <input type="email">
+                </div>
+                <div class="title">電話:<br>
+                    <input onkeyup="value=value.replace(/[^\d]/g,'') " id="user_nu">
+                </div>
+                    <div class="title">地址:<br>
+                         <input type="text">
+                    </div>
+        </div>
+        <div class="button">
+            <button class="but" type="submit" value="送出">送出</button>
+            <button class="but" type="reset" value="取消">取消</button>
+        </div>
+     </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    height: 300px;
+    width: auto;
+}
+h1 {
+    color: rgba(43, 107, 226, 0.349);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-size: 7rem;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+h1::after {
+    content:'Welcome To MyPhone' ;
+    color: rgb(238, 158, 234);
+    position: absolute;
+    top: 0;
+    left: 0;
+-webkit-animation: ellipse(100px 100px at 0% 50%);
+clip-path: ellipse(100px 100px at 0% 50%);
+animation: spotlight  5s infinite; 
+}
+@keyframes spotlight {
+    0% {
+        -webkit-animation: ellipse(100px 100px at 0% 50%);
+    clip-path:ellipse(100px 100px at 0% 50%);
+    }
+    50% {
+        -webkit-animation: ellipse(100px 100px at 100% 50%);
+    clip-path:ellipse(100px 100px at 100% 50%);
+    }
+    100% {
+        -webkit-animation: ellipse(100px 100px at 0% 50%);
+   clip-path:ellipse(100px 100px at 0% 50%);
+    }
+}

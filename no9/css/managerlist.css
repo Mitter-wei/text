@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 標楷體;
+}
+.header {
+    background-color: slategray;
+}
+.containter {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+.logo {
+    width: 100px;
+}
+.logo img {
+    width: 100%;
+    vertical-align: middle;
+}
+.main-nav {
+margin: auto;
+font-size: 17px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-style: oblique;
+}
+.main-nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 3em;
+    position: relative;
+}
+.main-nav a:after{
+    content:'' ;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -5px;
+    height: 0;
+    border-bottom: 1px solid black;
+    transition: .3s;
+}
+.main-nav a:hover:after {
+    left: 0;
+    right: 0;
+}
+.box {
+    width: 900px;
+    height: auto;
+    background-color: bisque;
+    margin-top: 20px;
+    border: 10px solid #fff;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 60px #000;
+    position: relative;
+    flex-wrap: wrap;
+}
+.box1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start ;
+    width: 896px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.39);
+    border: 2px solid black;
+}
+.item{
+    width: 200px;
+    height: 250px;
+    background-color: rgba(253, 252, 252, 0.438);
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    color: rgba(255, 0, 0, 0.781);
+    margin-bottom: 10px;
+}
+.search
+{
+    margin-top: 10px;
+}
+.list{
+    font-size: 25px;
+    display: flex;
+}
+.im img{
+    width: 200px;
+    height: 150px;
+}
+.text {
+    margin-top: 5px;
+}
+.number{
+    margin-top: 5px;
+    text-align: center;
+}
+.price {
+    margin-top: 5px;
+    text-align: center;
+}
